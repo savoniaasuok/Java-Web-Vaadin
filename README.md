@@ -12,6 +12,12 @@ Tai
 ./mvnw spring-boot:run
 ```
 
+Ja selaimeen
+
+```bash
+localhost:8080/login
+```
+
 Ctrl + C komennolla ohjelma sulkeutuu
 
 ## Sivun idea
