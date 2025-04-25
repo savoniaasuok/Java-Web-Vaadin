@@ -1,23 +1,44 @@
 # Lumen README
 
-- [ ] TODO Replace or update this README with instructions relevant to your application
-
-To start the application in development mode, import it into your IDE and run the `Application` class. 
-You can also start the application from the command line by running: 
+Ohjelma käynnistyy jommalla kummalla alla olevalla komennolla. Itse olen käyttänyt ensimmäistä vaihtoehtoa pääosin.
 
 ```bash
-./mvnw
+mvn spring-boot:run
 ```
 
-To build the application in production mode, run:
+Tai
 
 ```bash
-./mvnw -Pproduction package
+./mvnw spring-boot:run
 ```
 
-## Getting Started
+Ctrl + C komennolla ohjelma sulkeutuu
 
-The [Getting Started](https://vaadin.com/docs/latest/getting-started) guide will quickly familiarize you with your new
-Lumen implementation. You'll learn how to set up your development environment, understand the project 
-structure, and find resources to help you add muscles to your skeleton — transforming it into a fully-featured 
-application.
+## Sivun idea
+Tälle sivustolle on jatkossa aikomus lisätä antureita, jotka mittaavat mm. valoisuutta, lämpötilaa/kosteutta, sijaintia, 
+uv-indeksiä, tuulen nopeutta yms. minkä avulla voidaan paikantaa paras mahdollinen sijainti aurinkopaneelijärjestelmälle.
+Järjestelmä on suunnattu kotitalouksille ja harrastelijoille mutta en näe mitään ongelmaa etteikö pienet aurinkovoimalatkin
+voisi tätä hyödyntää.
+Tallennetusta datasta voi päätellä missä kohtaa esim. kaava-alueella olevalla tontilla on parhaimmat edellytykset tuottaa
+aurinkosähköä ympärivuoden.
+
+
+## Sivun käyttö
+
+Sivulle kirjaudutaan tällä hetkellä admin/admin tunnuksilla. Navibarista valitaan ensin "Anturit" välilehti jonne luodaan anturi.
+Sen jälkeen voidaan lisätä mittaus "Mittaukset" välilehdeltä, josta valitaan aikaisemmin luotu anturi, jonka mittaamia
+tiedot "mukamas" on. 
+
+Todellisuudessahan anturi antaa nämä tiedot mutta jotta voin havainnollistaa sivun toiminnallisuutta
+nämä tiedot syötetään nyt toistaiseksi käsin. Myös tässä esimerkissä on käytössä h2-tietokanta mikä ei ole lopullisessa
+toteutuksessa käytettävä tietokanta.
+
+Mittaukset välilehdeltä voidaan myös suorittaa haku tietyillä parametreillä. "Graafit" välilehti näyttää visuaaliseti 
+tallennetut mittaukset halutulla aikavälillä.
+
+## Itsearviointi
+
+Vaadin flow (kuten myös tämä kurssi) on ollut mielenkiintoinen ja ehdottomasti oppimisen arvoinen projekti, eikä aiheeseen
+tutustuminen jää tähän kurssin loppuessa. Java kurssi (ohjelmointi 3) oli mielenkiintoinen ja vaikka en ole web koodauksesta
+erityisen innostunut niin tämä sai mielenkiinnon kipinän heräämään, ehkä nimenomaan Javan ansiosta. 
+Omaa tekemistä voisi aina parantaa, eikä projekti ole läheskään vielä valmis mutta uskon että suunta on oikea.

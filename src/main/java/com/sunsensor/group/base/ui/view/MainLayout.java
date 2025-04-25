@@ -62,7 +62,7 @@ public class MainLayout extends AppLayout {
     }
 
     private Component createUserMenu() {
-        // Hae kirjautuneen käyttäjän nimi
+
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
         var avatar = new Avatar(username);
@@ -77,7 +77,6 @@ public class MainLayout extends AppLayout {
         var userMenuItem = userMenu.addItem(avatar);
         userMenuItem.add(username);
 
-        // Lisää alasvetovalikon kohdat
         userMenuItem.getSubMenu().addItem("View Profile", e ->
                 Notification.show("View Profile (toiminto tulossa)", 3000, Notification.Position.MIDDLE)
         );

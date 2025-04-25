@@ -54,7 +54,7 @@ public class UserService implements UserDetailsService {
             User admin = new User();
             admin.setUsername("admin");
             admin.setFullName("Admin Käyttäjä");
-            admin.setPassword("admin"); // raakateksti, salataan `save`-metodissa
+            admin.setPassword("admin");
             admin.setRole("ADMIN");
             save(admin);
         }

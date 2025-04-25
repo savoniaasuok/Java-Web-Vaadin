@@ -45,7 +45,6 @@ public class MeasurementChartView extends VerticalLayout {
         List<Measurement> data = measurementService.findAll();
         String range = timeRangeSelector.getValue();
 
-        // Grouping by date based on selected range
         Map<String, Double> grouped = switch (range) {
             case "Viikko" -> data.stream().collect(Collectors.groupingBy(
                     m -> m.getDate().with(java.time.DayOfWeek.MONDAY).toString(),

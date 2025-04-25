@@ -37,7 +37,6 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
             Notification.show("Kirjauduit ulos onnistuneesti", 3000, Notification.Position.TOP_CENTER)
                     .addThemeVariants(NotificationVariant.LUMO_SUCCESS);
 
-            // Uudelleenohjaus ilman query-parametreja
             event.forwardTo("/login");
         }
     }
